@@ -36,14 +36,24 @@ A ideia é instrumentar as instancias e conteiners da aplicação, além da pró
 
 
 instance_type      = "t2.micro"
+
   min_size           = 1
+  
   max_size           = 3
+  
   desired_capacity   = 1
+  
   min_size_scaling_night           = 1
+  
   max_size_scaling_night           = 2
+  
   desired_capacity_scaling_night   = 1
+  
   enable_autoscaling = true
+  
   region = var.region
+  
   keyname = var.keyname
+  
   ami                = "ami-00742e66d44c13cd9"
 
