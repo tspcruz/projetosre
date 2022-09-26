@@ -1,0 +1,11 @@
+---
+- hosts: local
+  connection: local
+  gather_facts: yes
+  tasks:
+    - name: archive container image as a tarball
+      docker_image:
+        name: "{{appname}}:{{appversion}}"
+        archive_path: dockerimages/{{appname}}_{{appversion}}.tar
+        source: pull
+        state: present
