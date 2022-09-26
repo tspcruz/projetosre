@@ -1,0 +1,38 @@
+---
+- hosts: local
+  connection: local
+  gather_facts: no
+  become_user: ansible
+  become: true
+  tasks:
+
+      - name: Init Terraform
+        shell:
+          terraform init
+        args:
+          chdir: "{{ terraform_path }}"
+        register: init       
+
+      - debug:
+         msg="{{init.stdout_lines}}"
+        
+
+      - name: Create resources
+        shell:
+          terraform apply -auto-approve
+        args:
+          chdir: "{{ terraform_path }}"
+        register: create
+
+      - debug:
+         msg="{{create.stdout_lines}}"
+          
+      - name: Destroy resources
+        shell:
+          terraform destroy -auto-approve
+        args:
+          chdir: "{{ terraform_path }}"  
+        register: destroy
+
+      - debug:
+         msg="{{destroy.stdout_lines}}"

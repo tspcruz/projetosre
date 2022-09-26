@@ -1,0 +1,9 @@
+---
+# file: host_vars/local
+keyname: "hom_key"
+region: "sa-east-1"
+ansible_ssh_private_key_file: "/home/ansible/controlproj/aws/hom_key.pem"
+terraform_path: "/home/ansible/controlproj/projsre/Terraform/terraform_projetosre/ambientes/hom/aplication"
+dockerfile: "/home/ansible/controlproj/projetos/hom/aplicacao/backend/app/Dockerfile"
+dockerproj: "/home/ansible/controlproj/projetos/hom/aplicacao/backend/app/"
+dockerimages: "/home/ansible/controlproj/dockerimages/hom"
