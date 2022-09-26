@@ -1,5 +1,6 @@
 Para subir o ambiente.
 
+* Na pasta do Ansible existe playbook para gerar KeyPair para as instancias EC2 de ambiente. Gerar as chaves antes de subir os ambientes da aplicação.
 * Subir ambiente Banco e na sequencia Aplicação 
 * Ponto a melhorar -- Configurar Pipeline no Jenkins para controle da infra e execução dos scripts do Terraform
 * Subir a partir da maquina de controle
