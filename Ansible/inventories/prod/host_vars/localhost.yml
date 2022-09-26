@@ -1,0 +1,8 @@
+---
+# file: host_vars/local
+keyname: "prd_key"
+region: "sa-east-1"
+ansible_ssh_private_key_file: "/home/ansible/controlproj/aws/hom_key.pem"
+dockerfile: "/home/ansible/controlproj/projetos/prd/aplicacao/backend/app/Dockerfile"
+dockerproj: "/home/ansible/controlproj/projetos/hom/aplicacao/backend/app/"
+dockerimages: "/home/ansible/controlproj/dockerimages/prd"
